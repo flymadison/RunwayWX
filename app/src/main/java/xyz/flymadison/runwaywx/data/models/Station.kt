@@ -56,42 +56,42 @@ data class Station (
     val receiptTime: String,
     val obsTime: Long,
     val reportTime: String,
-    val temp: Double,
-    val dewp: Double,
+    val temp: Double, // Temperature in Celsius
+    val dewp: Double, // Dew point in Celsius
     @Serializable(with = VisibilitySerializer::class)
-    val wdir: Float?,
-    val wspd: Long,
-    val wgst: Long? = null,
+    val wdir: Float?, // Wind direction in degrees. Null if variable/calm.
+    val wspd: Long,   // Wind speed in knots
+    val wgst: Long? = null, // Wind gust speed in knots
     @Serializable(with = VisibilitySerializer::class)
-    val visib: Float?,
-    val altim: Double,
-    val slp: Double? = null,
+    val visib: Float?, // Visibility, parsed into a float (e.g., statute miles)
+    val altim: Double, // Altimeter in inches of Mercury (inHg)
+    val slp: Double? = null, // Sea level pressure in hPa
     val qcField: Long,
     val wxString: String? = null,
     val presTend: Double? = null,
     val maxT: Double? = null,
     val minT: Double? = null,
-    val maxT24: Long? = null,
-    val minT24: Long? = null,
-    val precip: Long? = null,
+    val maxT24: Double? = null, // Max temp in 24h
+    val minT24: Double? = null, // Min temp in 24h
+    val precip: Double? = null, // Precipitation amount
 
     @SerialName("pcp3hr")
-    val pcp3Hr: Long? = null,
+    val pcp3Hr: Double? = null, // Precipitation in last 3 hours
 
     @SerialName("pcp6hr")
-    val pcp6Hr: Long? = null,
+    val pcp6Hr: Double? = null, // Precipitation in last 6 hours
 
     @SerialName("pcp24hr")
-    val pcp24Hr: Long? = null,
+    val pcp24Hr: Double? = null, // Precipitation in last 24 hours
 
-    val snow: Long? = null,
-    val vertVis: Long? = null,
+    val snow: Double? = null, // Snow depth
+    val vertVis: Long? = null, // Vertical visibility in feet
     val metarType: String,
     val rawOb: String,
     val mostRecent: Long,
     val lat: Double,
     val lon: Double,
-    val elev: Long,
+    val elev: Long, // Elevation in feet
     val prior: Long,
     val name: String,
     val clouds: List<Cloud>

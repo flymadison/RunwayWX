@@ -45,6 +45,9 @@ android {
     buildFeatures {
         compose = true
     }
+    hilt {
+        enableAggregatingTask = false
+    }
 }
 
 dependencies {
@@ -70,6 +73,8 @@ dependencies {
     implementation(libs.androidx.lifecycle.viewmodel.compose)
     implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.navigation.compose)
+    implementation(libs.retrofit2)
+    implementation(libs.retrofit2.serialization)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

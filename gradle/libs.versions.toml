@@ -16,6 +16,8 @@ navigationCompose = "2.9.0"
 composeCompiler = "1.5.0"
 kotlinxSerialization = "1.8.1"
 okhttp = "4.12.0"
+retrofit2 = "3.0.0"
+retrofit2-serialization = "1.0.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -43,6 +45,8 @@ kotlinx-serialization-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-
 kotlinx-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinxSerialization" }
 okhttp-core = { module = "com.squareup.okhttp3:okhttp", version.ref = "okhttp" }
 okhttp-logging-interceptor = { module = "com.squareup.okhttp3:logging-interceptor", version.ref = "okhttp" }
+retrofit2 = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit2" }
+retrofit2-serialization = { group = "com.jakewharton.retrofit", name = "retrofit2-kotlinx-serialization-converter", version.ref = "retrofit2-serialization" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
